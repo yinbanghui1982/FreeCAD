@@ -39,6 +39,9 @@ whether you are a hobbyist, programmer, experienced CAD user, student or teacher
     * **Python** FreeCAD offers a broad Python API
     * **Qt** Graphical user interface built with Qt
 
+* Sound Test
+  在原有freecad的基础上，增加声和振动测试内容，将建模、仿真、测试整合到一起 
+
 
 Installing
 ----------
