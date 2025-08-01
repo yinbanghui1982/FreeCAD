@@ -1,0 +1,24 @@
+clc
+clear
+% 张紧力分析
+%% 0
+% [ConvertedData,ConvertVer,ChanNames,Ts,data1,data2,data3,data4,N,time]= ... 
+%     analysis4("10/Test 1_jiazhi_1_230830104014_GM.tdms");
+% % plot(time,data1)
+% 
+% time2=time(1:1024);
+% sig=data1(1:1024);
+
+Fs=10000; %采样频率
+time = 0:1/Fs:10;
+sig = 3*sin(2*pi*1000*time)+8*sin(2*pi*2000*time)+5*sin(2*pi*3000*time);
+
+% 0-无 1-汉宁窗
+w = 1;
+
+[f,Y,fs]=pingpu(time,sig,w);
+figure(2);plot(f,Y,'DisplayName','通道1');hold on
+
+xlabel("频率/Hz")
+ylabel("幅值谱级/dB ref=20e-6 Pa/Hz")
+leg

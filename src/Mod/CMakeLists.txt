@@ -143,3 +143,6 @@ endif(BUILD_TUX)
 if(BUILD_WEB)
     add_subdirectory(Web)
 endif(BUILD_WEB)
+
+# ----------------自定义模块---------------------------------------
+add_subdirectory(SoundTest)

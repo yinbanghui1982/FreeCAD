@@ -1,0 +1,32 @@
+clc
+clear
+
+Fs=10000;
+t = 0:1/Fs:10;
+s1 = sin(2*pi*1000*t);
+N=length(s1); 
+s2=sin(2*pi*500*t);
+
+
+[Pxy, f] = cpsd(s1, s2,512, [], N, Fs);
+Pxy=pow2db(abs(Pxy))
+
+
+plot(f,Pxy)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

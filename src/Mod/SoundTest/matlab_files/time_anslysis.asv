@@ -1,0 +1,13 @@
+function [rms2,mean2]=time_anslysis(sig)
+
+%有效值
+rms2=rms(sig);
+
+%平均值
+mean2=mean(sig);
+
+%最大幅值
+max_abs=max(abs(sig));
+
+%平均幅值
+mean_abs
