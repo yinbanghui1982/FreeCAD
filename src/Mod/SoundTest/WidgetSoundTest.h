@@ -97,7 +97,6 @@ private Q_SLOTS:
     void on_pushButtonShaomiao_clicked();
     void on_pushButtonSellect_clicked();
     void on_pushButtonShibo_clicked();
-
 //     void on_pushButtonCaiyang_clicked();
 
 //     void on_pushButtonOpenTimeFile_clicked();

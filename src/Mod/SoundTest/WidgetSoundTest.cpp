@@ -81,12 +81,12 @@ WidgetSoundTest::WidgetSoundTest(QWidget* parent)
 
      updateLingmingdu();
 
-    // //----------------------------------------------------------------
-    // //示波器对象
-    // // oscilloscope=new OscilloscopeSerial(ui);
-    // oscilloscope=new OscilloscopeEthenet(ui,danweiList);
-    // oscilloscope->device=device;
-    // oscilloscope->shiboLength=shiboLengthList[0];
+    //----------------------------------------------------------------
+    //示波器对象
+    // oscilloscope=new OscilloscopeSerial(ui);
+    oscilloscope=new OscilloscopeEthenet(ui,danweiList);
+    oscilloscope->device=device;
+    oscilloscope->shiboLength=shiboLengthList[0];
 
     // // 采样长度列表
     // int caiyangTime[2]={2,10};

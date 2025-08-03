@@ -1,5 +1,6 @@
 #include "corr.h"
 
+namespace SoundTest {
 // 计算自相关函数
 /*
 N 序列长度
@@ -52,3 +53,4 @@ void crossCorrelationAnalysis(double* data1, double* data2, int N, double dt, do
         ylist++;
     }
 }
+} // namespace SoundTest

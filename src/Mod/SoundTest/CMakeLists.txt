@@ -37,7 +37,7 @@ SET(Gui_UIC_SRCS
 if(BUILD_GUI)
 
     SET(SoundTestGuiPy_SRCS 
-        # analysis.cpp
+        analysis.cpp
         calibration.cpp
         config.cpp
         corr.cpp
@@ -47,11 +47,11 @@ if(BUILD_GUI)
         SoundTestView.cpp
         SoundTestGuiPy.cpp        
         WidgetSoundTest.cpp         
-        # oscilloscope.cpp 
-        # oscilloscopeethenet.cpp
-        # oscilloscopeplot.cpp
+        oscilloscope.cpp 
+        oscilloscopeethenet.cpp
+        oscilloscopeplot.cpp
         # oscilloscopeserial.cpp
-        # plotutils.cpp
+        plotutils.cpp
         libtdms-gpl-0.5/src/TdmsChannel.cpp
         libtdms-gpl-0.5/src/TdmsGroup.cpp
         libtdms-gpl-0.5/src/TdmsLeadIn.cpp
