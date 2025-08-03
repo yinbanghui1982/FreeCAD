@@ -3,11 +3,19 @@
 #include <QTextStream>
 #include <QString>
 #include <QStringList>
+#include <QCoreApplication>
+#include <QDir>
 
 using namespace SoundTest;
 
-Config::Config():filename("config.txt")
+Config::Config()
 {
+    // 获取应用程序所在目录的绝对路径
+    QString appDir = QCoreApplication::applicationDirPath();
+    // 拼接配置文件完整路径
+    QString configPath = QDir(appDir).filePath("config.txt");
+    filename = configPath;
+
     // 读取配置文件
     QFile file(filename);
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {

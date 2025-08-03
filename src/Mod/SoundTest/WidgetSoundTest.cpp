@@ -75,11 +75,11 @@ WidgetSoundTest::WidgetSoundTest(QWidget* parent)
     device=new Device(ui,modelShebei);
 
 
-    // //----------------------------------------------------------------
-    // //校准对象
-    // calibration=new Calibration(ui,modelTongdao,config);
+     //----------------------------------------------------------------
+     //校准对象
+     calibration=new Calibration(ui,modelTongdao,config);
 
-    // updateLingmingdu();
+     updateLingmingdu();
 
     // //----------------------------------------------------------------
     // //示波器对象
