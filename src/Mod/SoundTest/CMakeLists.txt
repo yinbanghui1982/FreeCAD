@@ -58,47 +58,8 @@ if(BUILD_GUI)
         libtdms-gpl-0.5/src/TdmsMetaData.cpp
         libtdms-gpl-0.5/src/TdmsObject.cpp
         libtdms-gpl-0.5/src/TdmsParser.cpp
-        libtdms-gpl-0.5/src/TdmsSegment.cpp        
-        # matlab_files/codegen/lib/cpsd_analysis/FFTImplementationCallback.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/bsxfun.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/computeDFT.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/computepsd.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/cpsd_analysis.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/cpsd_analysis_data.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/cpsd_analysis_initialize.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/cpsd_analysis_rtwutil.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/cpsd_analysis_terminate.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/psdfreqvec.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/rtGetInf.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/rtGetNaN.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/rt_nonfinite.cpp
-        # matlab_files/codegen/lib/cpsd_analysis/welch.cpp
-        # matlab_files/codegen/lib/pingpu/FFTImplementationCallback.cpp
-        # matlab_files/codegen/lib/pingpu/pingpu.cpp
-        # matlab_files/codegen/lib/pingpu/pingpu_data.cpp
-        # matlab_files/codegen/lib/pingpu/pingpu_initialize.cpp
-        # matlab_files/codegen/lib/pingpu/pingpu_terminate.cpp
-        # matlab_files/codegen/lib/psd_analysis/FFTImplementationCallback.cpp
-        # matlab_files/codegen/lib/psd_analysis/bsxfun.cpp
-        # matlab_files/codegen/lib/psd_analysis/computeDFT.cpp
-        # matlab_files/codegen/lib/psd_analysis/computeperiodogram.cpp
-        # matlab_files/codegen/lib/psd_analysis/psd_analysis.cpp
-        # matlab_files/codegen/lib/psd_analysis/psd_analysis_data.cpp
-        # matlab_files/codegen/lib/psd_analysis/psd_analysis_initialize.cpp
-        # matlab_files/codegen/lib/psd_analysis/psd_analysis_terminate.cpp
-        # matlab_files/codegen/lib/psd_analysis/rtGetInf.cpp
-        # matlab_files/codegen/lib/psd_analysis/rtGetNaN.cpp
-        # matlab_files/codegen/lib/psd_analysis/rt_nonfinite.cpp
-        # matlab_files/codegen/lib/time_anslysis/combineVectorElements.cpp
-        # matlab_files/codegen/lib/time_anslysis/mean.cpp
-        # matlab_files/codegen/lib/time_anslysis/minOrMax.cpp
-        # matlab_files/codegen/lib/time_anslysis/rtGetInf.cpp
-        # matlab_files/codegen/lib/time_anslysis/rtGetNaN.cpp
-        # matlab_files/codegen/lib/time_anslysis/rt_nonfinite.cpp
-        # matlab_files/codegen/lib/time_anslysis/time_anslysis.cpp
-        # matlab_files/codegen/lib/time_anslysis/time_anslysis_data.cpp
-        # matlab_files/codegen/lib/time_anslysis/time_anslysis_initialize.cpp
-        # matlab_files/codegen/lib/time_anslysis/time_anslysis_terminate.cpp
+        libtdms-gpl-0.5/src/TdmsSegment.cpp       
+        
     )
 
     add_library(SoundTestGuiPy SHARED ${SoundTestGuiPy_SRCS})
@@ -118,6 +79,7 @@ if(BUILD_GUI)
     #     "D:/Anaconda3/envs/freecad/include"
     #     "D:/Anaconda3/envs/freecad/Lib/site-packages/numpy/_core/include"
     # )
+
     target_link_libraries(SoundTestGuiPy 
         FreeCADGui 
         Qt6::Core
@@ -127,11 +89,18 @@ if(BUILD_GUI)
         Qt6::Charts
         Qt6::SerialPort
         Qt6::Network
-        "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/libmx.lib"
-        "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/libmat.lib"
-        "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/libeng.lib"
-        "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/mclmcr.lib"
-        "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/mclmcrrt.lib"
+        # "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/libmx.lib"
+        # "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/libmat.lib"
+        # "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/libeng.lib"
+        # "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/mclmcr.lib"
+        # "D:/Program Files/Polyspace/R2020b/extern/lib/win64/microsoft/mclmcrrt.lib"
+        # "D:/gongyeruanjian/freecad101/FreeCAD_Build/bin/libs/python312.lib"
+        "${CMAKE_CURRENT_SOURCE_DIR}/matlab_files/codegen/dll/onethird/onethird.lib"
+        "${CMAKE_CURRENT_SOURCE_DIR}/matlab_files/codegen/dll/daopu_analysis/daopu_analysis.lib"
+        "${CMAKE_CURRENT_SOURCE_DIR}/matlab_files/codegen/dll/cpsd_analysis/cpsd_analysis.lib"
+        "${CMAKE_CURRENT_SOURCE_DIR}/matlab_files/codegen/dll/pingpu/pingpu.lib"
+        "${CMAKE_CURRENT_SOURCE_DIR}/matlab_files/codegen/dll/psd_analysis/psd_analysis.lib"
+        "${CMAKE_CURRENT_SOURCE_DIR}/matlab_files/codegen/dll/time_anslysis/time_anslysis.lib"
     )
     if (FREECAD_WARN_ERROR)
         target_compile_warn_error(SoundTestGuiPy)

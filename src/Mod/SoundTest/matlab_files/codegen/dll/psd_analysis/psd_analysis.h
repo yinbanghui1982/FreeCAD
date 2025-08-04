@@ -11,7 +11,8 @@
 // Include Files
 #include "psd_analysis_spec.h"
 #include "rtwtypes.h"
-#include "coder_array.h"
+// #include "coder_array.h"
+#include "matlab_files/codegen/lib/time_anslysis/coder_array.h"
 #include <cstddef>
 #include <cstdlib>
 
